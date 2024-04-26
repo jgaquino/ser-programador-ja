@@ -1,0 +1,37 @@
+div.social {
+  a {
+    transition: 0.3s;
+    border-radius: 2px;
+  }
+
+  a.linkedin {
+    &:hover {
+      background: #0077b5 !important;
+    }
+  }
+  a.website {
+    &:hover {
+      background: #ffe82c !important;
+    }
+  }
+  a.upwork {
+    &:hover {
+      background: #37a000 !important;
+    }
+  }
+  a.instagram {
+    &:hover {
+      background: #833ab4 !important;
+    }
+  }
+  a.behance {
+    &:hover {
+      background: #1769ff !important;
+    }
+  }
+  a.facebook {
+    &:hover {
+      background: #3b5998 !important;
+    }
+  }
+}

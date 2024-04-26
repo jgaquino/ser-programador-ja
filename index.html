@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/landing.css" />
+    <title>Partiu ser programador Front end?</title>
+    <meta
+      name="description"
+      content="Que tal bater um papo com um Desenvolvedor Front End profissional?"
+    />
+    <meta
+      name="keywords"
+      content="HTML,CSS,XML,JavaScript,PHP,programaçao,estudo,aprender a programar,frontend,como ser um frontend,o que e frontend,front end,backend,back end,programaçao brasil,programaçao em portugues,aulas de programaçao,dicas de programaçao,como estudar programaçao,algoritmo"
+    />
+    <meta name="author" content="João Gabriel Santos de Aquino" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="media/favicon-32x32.png"
+    />
+    <!-- Facebook -->
+    <meta property="og:title" content="Partiu ser programador Front end?" />
+    <meta
+      property="og:description"
+      content="Que tal bater um papo com um Desenvolvedor Front End profissional?"
+    />
+    <meta
+      property="og:image"
+      content="https://projects.jgfrontend.com/ser-programador-ja/media/facebook_image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://projects.jgfrontend.com/ser-programador-ja/"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <header>
+          <div>
+            <img width="71" src="./media/jg.svg" alt="JG" />
+
+            <div class="social">
+              <a
+                class="linkedin"
+                target="_blank"
+                href="https://www.linkedin.com/in/jgfrontend/"
+                ><img src="./media/social/linkedin.svg" alt="linkedin"
+              /></a>
+              <a class="website" target="_blank" href="https://jgfrontend.com"
+                ><img src="./media/social/website.svg" alt="Website"
+              /></a>
+              <a class="upwork" target="_blank" href="https://www.goo.gl/MqHIUh"
+                ><img
+                  style="top: 53%"
+                  src="./media/social/upwork.svg"
+                  alt="Upwork"
+              /></a>
+              <a
+                class="instagram"
+                target="_blank"
+                href="https://www.instagram.com/jgfrontend/"
+                ><img src="./media/social/instagram.svg" alt="instagram"
+              /></a>
+              <a
+                class="behance"
+                target="_blank"
+                href="https://www.behance.net/jgfrontend"
+                ><img src="./media/social/behance.svg" alt="Behance"
+              /></a>
+              <a
+                class="facebook"
+                target="_blank"
+                href="https://www.facebook.com/jgfrontend"
+                ><img src="./media/social/facebook.svg" alt="Facebook"
+              /></a>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="first">
+            <h1>
+              Que tal bater um papo com um Desenvolvedor Front End profissional?
+            </h1>
+            <p>
+              Quer ser um Desenvolvedor Front End e não sabe se está no caminho
+              certo? <strong>Basta preencher o formulário</strong>. As 5
+              melhores respostas serão escolhidas para não só sanar dúvidas,
+              receber dicas de como ingressar ou continuar nessa área mas também
+              para bater um papo cabeça e motivador comigo direto da Espanha.
+            </p>
+          </div>
+          <div class="last">
+            <div>
+              <form>
+                <p>Complete o formulário para participar!</p>
+                <input name="name" placeholder="Nome" type="text" />
+                <input name="email" placeholder="Email" type="text" />
+                <textarea
+                  name="frontend"
+                  placeholder="Porque você quer ser desenvolvedor Frontend?"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <input name="submit" type="hidden" />
+                <button type="submit">ENVIAR</button>
+              </form>
+
+              <img class="html5" src="./media/html5.svg" alt="html5" />
+              <img class="css3" src="./media/css3.svg" alt="css3" />
+              <img class="js" src="./media/js.svg" alt="javascript" />
+              <img class="nodejs" src="./media/node.svg" alt="nodejs" />
+              <img class="angular" src="./media/angular.svg" alt="angular" />
+              <img class="react" src="./media/react.svg" alt="react" />
+            </div>
+            <span class="copyright mobile"
+              >&copy; 2018 JG. Todos los direchos reservados |
+              <a href="https://jgfrontend.com/">jgfrontend.com</a></span
+            >
+          </div>
+        </div>
+
+        <span class="copyright"
+          >&copy; 2018 JG. Todos los derechos reservados |
+          <a href="https://jgfrontend.com/">jgfrontend.com</a></span
+        >
+      </div>
+      <img src="./media/bkg_form.png" alt="" />
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/landing.js"></script>
+    <script>
+      //Validate Form
+      function validateEmail(email) {
+        var re =
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      var $form = $("form"),
+        $btnSubmit = $("form > button"),
+        $name = $("form > input[name=name]"),
+        $email = $("form > input[name=email]"),
+        $frontend = $("form > textarea[name=frontend]");
+
+      var validate = [false, false, false];
+
+      $btnSubmit.on("click", function (e) {
+        e.preventDefault();
+
+        if ($name.val().trim() == "") {
+          validate[0] = false;
+          $name.addClass("error");
+        } else {
+          validate[0] = true;
+          $name.removeClass("error");
+        }
+
+        if (!validateEmail($email.val())) {
+          validate[1] = false;
+          $email.addClass("error");
+        } else {
+          validate[1] = true;
+          $email.removeClass("error");
+        }
+
+        if ($frontend.val().trim() == "") {
+          validate[2] = false;
+          $frontend.addClass("error");
+        } else {
+          validate[2] = true;
+          $frontend.removeClass("error");
+        }
+
+        if (validate[0] && validate[1] && validate[2])
+          document.location.href = "/confirmation.html";
+      });
+    </script>
+  </body>
+</html>
